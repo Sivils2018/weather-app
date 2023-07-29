@@ -1,0 +1,90 @@
+body { /* this will center everything and allow the text to be in the middle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* means the full view page */
+    margin: 0; /* so that the search bar wont go over it will say in the center */
+    font-family: 'Open Sans', sans-serif;
+    background: #222;
+    background-image: url('https://source.unsplash.com/1600x900/?city');
+    font-size: 120%;
+}
+
+.card {
+    background: #000000d0;
+    padding: 2em;
+    border-radius: 30px; /* this makes the box round */
+    width: 100%;
+    max-width: 420px; /* this is so that the box will only take us a certain amount of shape , like if we were to have a width screen it will stay in the middle */
+    margin: 1em;
+    color: white;
+}
+
+h1.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+}
+
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: 2.5em;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out; /* this is when we hover over the search icon it will be smooth */
+}
+
+button:hover{
+    background: #7c7c7c6b;
+}
+
+input.search-bar{
+    border: none;
+    outline: none;
+    padding: 0.4em 1em; /* this is what makes it bigger */
+    border-radius: 24px; /* rounded edge */
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100%-100px) /* this is so that we can full the entire width */
+}
+
+.description {
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.weather.loading {
+    visibility: hidden ;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading:after
+{
+    visibility: visible;
+    content: "Loading....";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
